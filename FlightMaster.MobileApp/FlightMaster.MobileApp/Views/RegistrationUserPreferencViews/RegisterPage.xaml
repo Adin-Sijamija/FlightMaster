@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:FlightMaster.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="FlightMaster.MobileApp.Views.RegisterPage">
+
+    <ContentPage.BindingContext>
+        <views:RegisterVieModel></views:RegisterVieModel>
+    </ContentPage.BindingContext>
+    
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand" Margin="20,20,20,20">
+
+            <Label Text="Registration" HorizontalTextAlignment="Center"
+                   FontSize="40"
+                   ></Label>
+            
+            <Frame CornerRadius="100" 
+           HeightRequest="200"
+           WidthRequest="200"
+           HorizontalOptions="Center"
+           Padding="0"
+           IsClippedToBounds="True">
+                <Image Aspect="AspectFit"
+                   x:Name="image">
+
+                </Image>
+            </Frame>
+            
+            <Entry Placeholder="FirstName" Text="{Binding _Firstname}" ></Entry>
+            <Entry Placeholder="LastName"  Text="{Binding _Lastname}"></Entry>
+            <Entry Placeholder="Username"  Text="{Binding _UserName}"></Entry>
+            <Entry Placeholder="Password"  Text="{Binding _PassWord1}" IsPassword="True"></Entry>
+            <Entry  Text="{Binding _PassWord2}"
+                Placeholder="Pasword confrmation"
+                   IsPassword="True"></Entry>
+            <Label x:Name="ValidationLabel" TextColor="Red" Text="Test"
+                    HorizontalOptions="CenterAndExpand"
+                   Opacity="0"
+                   ></Label>
+
+            <Button Text="Select Picture" Clicked="PictureSelectClick"></Button>
+
+            <Button Text="Register" Clicked="RegisterClick"></Button>
+            <ActivityIndicator IsRunning="False"></ActivityIndicator>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

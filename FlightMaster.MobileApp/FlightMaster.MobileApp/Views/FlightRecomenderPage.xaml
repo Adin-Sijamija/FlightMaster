@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:FlightMaster.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="FlightMaster.MobileApp.Views.FlightRecomenderPage">
+
+    <ContentPage.BindingContext>
+        <views:FlightRecomenderViewModel></views:FlightRecomenderViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+              
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <ActivityIndicator x:Name="RecommenderLoader" IsVisible="True" IsRunning="True"></ActivityIndicator>
+            <ListView IsPullToRefreshEnabled="True"
+                      RefreshCommand="{Binding LoadStartPage}"
+                      ItemSelected="ListView_ItemSelected"
+                      ItemAppearing="ListView_ItemAppearing"
+                       ItemsSource="{Binding Journeys}"
+                      x:Name="ReccomendListView" 
+                      IsVisible="False">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="Black">
+                                <StackLayout>
+                                    <StackLayout Orientation="Horizontal" >
+
+                                        <Label Text="{Binding TotalFlights, StringFormat='Number of flights: {0} '}"></Label>
+                                        <Label Text="{Binding StartDate , StringFormat='Journey start: {0} '}"></Label>
+                                        <Label Text="{Binding EndDate , StringFormat='Journey end: {0} '}"></Label>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5" Padding="5">
+                                        <Label Text="{Binding TravelTime, StringFormat='Total travel time: {0}  '}"></Label>
+                                        <Label Text="{Binding AvarageCost, StringFormat='Avarage cost: {0}  '}"></Label>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="5" Padding="5">
+                                        <Label Text="{Binding StartAirfield, StringFormat='Departure Airfield: {0}  '}" Padding="0,0,10,0"></Label>
+                                        <Label Text="{Binding EndAirfield, StringFormat='Arrival Airfield: {0} '}"></Label>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

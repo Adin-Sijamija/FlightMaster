@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:FlightMaster.MobileApp.ViewModels"
+             mc:Ignorable="d"
+             x:Class="FlightMaster.MobileApp.Views.LogInPage">
+
+    <ContentPage.BindingContext>
+        <views:LogInViewModel></views:LogInViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                     VerticalOptions="CenterAndExpand" 
+                     Padding="20,20,20,20"
+                     >
+          
+
+            
+            <Label Text="FLIGHT MASTER" FontSize="40">
+                <Label.TextColor>Red</Label.TextColor>
+                 
+            </Label>
+            <Label Text="Take control over your flights!"></Label>
+
+            <Entry Placeholder="Username" Text="{Binding _UserName}" ></Entry>
+            <Entry Placeholder="Password" IsPassword="True" Text="{Binding _PassWord}"></Entry>
+            <Label Text="Don't have a account? Make one now!" x:Name="RegisterLabel" HorizontalTextAlignment="Center"></Label>
+            <Button Text="Log In" Clicked="Button_Clicked"  ></Button>
+            <ActivityIndicator IsRunning="False" x:Name="LoggingIndicator" ></ActivityIndicator>
+            <Label Text="Logging in..." HorizontalTextAlignment="Center" IsVisible="False" x:Name="LoggingLabel"></Label>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

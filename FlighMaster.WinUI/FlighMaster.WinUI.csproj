@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CC575F37-EB6E-4FF4-9D1B-F7300373A6E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FlighMaster.WinUI</RootNamespace>
+    <AssemblyName>FlighMaster.WinUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Flurl, Version=2.8.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.2.8.2\lib\net40\Flurl.dll</HintPath>
+    </Reference>
+    <Reference Include="Flurl.Http, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flurl.Http.2.4.2\lib\net46\Flurl.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.6.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Api\ApiBuilder.cs" />
+    <Compile Include="Api\ApiCaller.cs" />
+    <Compile Include="Forms\Airplanes\AirplaneInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Airplanes\AirplaneInsertForm.Designer.cs">
+      <DependentUpon>AirplaneInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Airplanes\AirplaneTypeInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Airplanes\AirplaneTypeInsertForm.Designer.cs">
+      <DependentUpon>AirplaneTypeInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Companies\CompaniesIndexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Companies\CompaniesIndexForm.Designer.cs">
+      <DependentUpon>CompaniesIndexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Companies\CompaniesInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Companies\CompaniesInsertForm.Designer.cs">
+      <DependentUpon>CompaniesInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Flight\CheckInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Flight\CheckInForm.Designer.cs">
+      <DependentUpon>CheckInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Flight\FlightIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Flight\FlightIndex.Designer.cs">
+      <DependentUpon>FlightIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Flight\FlightInsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Flight\FlightInsertForm.Designer.cs">
+      <DependentUpon>FlightInsertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Flight\FlightStatusForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Flight\FlightStatusForm.Designer.cs">
+      <DependentUpon>FlightStatusForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Flight\FlightTicketsDiscount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Flight\FlightTicketsDiscount.Designer.cs">
+      <DependentUpon>FlightTicketsDiscount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Flight\Luxuries\LuxuriesIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Flight\Luxuries\LuxuriesIndex.Designer.cs">
+      <DependentUpon>LuxuriesIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Flight\Luxuries\LuxuriesInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Flight\Luxuries\LuxuriesInsert.Designer.cs">
+      <DependentUpon>LuxuriesInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Flight\TicketTypes\TicketTypeIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Flight\TicketTypes\TicketTypeIndex.Designer.cs">
+      <DependentUpon>TicketTypeIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Flight\TicketTypes\TicketTypeInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Flight\TicketTypes\TicketTypeInsert.Designer.cs">
+      <DependentUpon>TicketTypeInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Locations\Airfields\AirfieldIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Locations\Airfields\AirfieldIndex.Designer.cs">
+      <DependentUpon>AirfieldIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Locations\Airfields\AirfieldInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Locations\Airfields\AirfieldInsert.Designer.cs">
+      <DependentUpon>AirfieldInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Locations\Cities\CitiesIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Locations\Cities\CitiesIndex.Designer.cs">
+      <DependentUpon>CitiesIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Locations\Cities\CitiesInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Locations\Cities\CitiesInsert.Designer.cs">
+      <DependentUpon>CitiesInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Locations\Countries\CountriesIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Locations\Countries\CountriesIndex.Designer.cs">
+      <DependentUpon>CountriesIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Locations\Countries\CountriesInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Locations\Countries\CountriesInsert.Designer.cs">
+      <DependentUpon>CountriesInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menus\LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menus\LogInForm.Designer.cs">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menus\MainPageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menus\MainPageForm.Designer.cs">
+      <DependentUpon>MainPageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Menus\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Menus\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Style\MdiParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Style\PopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Style\PopUp.Designer.cs">
+      <DependentUpon>PopUp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Airplanes\AirplaneInsertForm.resx">
+      <DependentUpon>AirplaneInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Airplanes\AirplaneTypeInsertForm.resx">
+      <DependentUpon>AirplaneTypeInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Companies\CompaniesIndexForm.resx">
+      <DependentUpon>CompaniesIndexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Companies\CompaniesInsertForm.resx">
+      <DependentUpon>CompaniesInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Flight\CheckInForm.resx">
+      <DependentUpon>CheckInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Flight\FlightIndex.resx">
+      <DependentUpon>FlightIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Flight\FlightInsertForm.resx">
+      <DependentUpon>FlightInsertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Flight\FlightStatusForm.resx">
+      <DependentUpon>FlightStatusForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Flight\FlightTicketsDiscount.resx">
+      <DependentUpon>FlightTicketsDiscount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Flight\Luxuries\LuxuriesIndex.resx">
+      <DependentUpon>LuxuriesIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Flight\Luxuries\LuxuriesInsert.resx">
+      <DependentUpon>LuxuriesInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Flight\TicketTypes\TicketTypeIndex.resx">
+      <DependentUpon>TicketTypeIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Flight\TicketTypes\TicketTypeInsert.resx">
+      <DependentUpon>TicketTypeInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Locations\Airfields\AirfieldIndex.resx">
+      <DependentUpon>AirfieldIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Locations\Airfields\AirfieldInsert.resx">
+      <DependentUpon>AirfieldInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Locations\Cities\CitiesIndex.resx">
+      <DependentUpon>CitiesIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Locations\Cities\CitiesInsert.resx">
+      <DependentUpon>CitiesInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Locations\Countries\CountriesIndex.resx">
+      <DependentUpon>CountriesIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Locations\Countries\CountriesInsert.resx">
+      <DependentUpon>CountriesInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menus\LogInForm.resx">
+      <DependentUpon>LogInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menus\MainPageForm.resx">
+      <DependentUpon>MainPageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Menus\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Style\PopUp.resx">
+      <DependentUpon>PopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlightMaster.Model\FlightMaster.Model.csproj">
+      <Project>{ff95d248-0bc8-44dc-9794-80091956c62c}</Project>
+      <Name>FlightMaster.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LoadGif.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajax-loader.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

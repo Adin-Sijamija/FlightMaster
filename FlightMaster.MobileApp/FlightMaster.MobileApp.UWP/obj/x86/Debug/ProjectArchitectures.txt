@@ -1,0 +1,1 @@
+C:\Users\Adin-PC\source\repos\FlightMaster\FlightMaster.MobileApp\FlightMaster.MobileApp.UWP\FlightMaster.MobileApp.UWP.csproj;x86

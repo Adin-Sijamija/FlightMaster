@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:FlightMaster.MobileApp.ViewModels.JourneyAdditionViewModels"
+             mc:Ignorable="d"
+             x:Class="FlightMaster.MobileApp.Views.JourneyInfoTabs.FlightInfoPage">
+
+    <ContentPage.BindingContext>
+        <views:JourneyFlightInfoViewModel></views:JourneyFlightInfoViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+
+                <Label HorizontalTextAlignment="Center" FontSize="Medium" Text="Flight Data"></Label>
+
+                <StackLayout Orientation="Vertical" Padding="10" Margin="10">
+                    <StackLayout>
+                        <Label Text="Date info" HorizontalOptions="Center"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="{Binding Path=StartDate,StringFormat='Flight Start: {0:MMMM dd, yyyy H:mm}'}"></Label>
+                        <Label Text="{Binding Path=EndDate,StringFormat='Flight end: {0:MMMM dd, yyyy H:mm}'}"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="{Binding Path=Duration,StringFormat='Flight duration: {0}'}"></Label>
+                    </StackLayout>
+
+                    <StackLayout Padding="20">
+                        <Label Text="Flight provider info" HorizontalOptions="Center"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="{Binding Path=CompanyName,StringFormat='Flight Provider:{0}'}"></Label>
+                        <Image IsVisible="False" x:Name="CompanyLogoImage" Aspect="AspectFit" HeightRequest="70" WidthRequest="50" Margin="10"  ></Image>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label Text="{Binding Path=AirplaneType,StringFormat='Aircraft Type: {0}'}"></Label>
+                        <Label Text="{Binding Path=AirplaneName,StringFormat='Aircraft Name: {0}'}"></Label>
+                    </StackLayout>
+
+
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Label Padding="10" Text="Tickets:" FontSize="Large" HorizontalOptions="Center"   ></Label>
+                    </StackLayout>
+
+                    <TableView Intent="Settings">
+                        <TableRoot>
+                            <TableSection x:Name="TicketData">
+                                
+                            </TableSection>
+                        </TableRoot>
+                    </TableView>
+
+
+                    
+                    <!--<ListView ItemsSource="{Binding TicketLuxuriesInfos}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+
+                                    <StackLayout Padding="5" Margin="5">
+
+                                        <StackLayout HorizontalOptions="Center">
+                                            <Label Text="{Binding Name,StringFormat='Ticket Type: {0}'}"></Label>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                            <Label Text="{Binding Price, StringFormat='Price: {0} $'}"></Label>
+                                            <Label Text="{Binding CurrentTickets, StringFormat='Current Tickets: {0} /'}"></Label>
+                                            <Label Text="{Binding MaxTickets, StringFormat='of {0} '}"></Label>
+                                        </StackLayout>
+                                        <StackLayout HorizontalOptions="CenterAndExpand">
+                                            <Label Text="Your Tickets:"></Label>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                            <Button Text="-"></Button>
+                                            <Entry Keyboard="Numeric" Text="0"></Entry>
+                                            <Button Text="+"></Button>
+                                        </StackLayout>
+                                        <StackLayout HorizontalOptions="CenterAndExpand">
+                                            <Label Text="Has Luxuries:"></Label>
+                                        </StackLayout>
+                                        <StackLayout HorizontalOptions="CenterAndExpand">
+                                            <ListView ItemsSource="{Binding TicketLuxuries}">
+                                                <ListView.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <ViewCell>
+                                                            <Label Text="{Binding Name}"></Label>
+                                                        </ViewCell>
+                                                    </DataTemplate>
+                                                </ListView.ItemTemplate>
+                                            </ListView>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>-->
+
+
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+     
+    </ContentPage.Content>
+</ContentPage>

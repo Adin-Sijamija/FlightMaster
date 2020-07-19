@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "z8ewqwV3yLynWfDtIvA9WH5oOLuHpqlxNCUExc5s2IgTPpHqtpfC6eWmhx1Y9Q3lQ/RTwGm21/OH/H62HVdw7Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Adin-PC\\source\\repos\\FlightMaster\\FlightMaster.Model\\FlightMaster.Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\system.componentmodel.annotations\\4.6.0\\system.componentmodel.annotations.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}

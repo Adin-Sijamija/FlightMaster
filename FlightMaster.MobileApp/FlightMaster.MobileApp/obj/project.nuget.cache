@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "XzjfvYx0V6etY+L95PqA36tmNvq9wzHslF2ttI9aLZ1/td41pNHHDetDoQDw2iv/SQxEl3x/QqZe1XQN4H9CsQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Adin-PC\\source\\repos\\FlightMaster\\FlightMaster.MobileApp\\FlightMaster.MobileApp\\FlightMaster.MobileApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\dotmorten.xamarin.forms.autosuggestbox\\0.7.0\\dotmorten.xamarin.forms.autosuggestbox.0.7.0.nupkg.sha512",
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\fluentvalidation\\8.6.0\\fluentvalidation.8.6.0.nupkg.sha512",
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\flurl\\2.8.2\\flurl.2.8.2.nupkg.sha512",
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\flurl.http\\2.4.2\\flurl.http.2.4.2.nupkg.sha512",
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\system.componentmodel.annotations\\4.6.0\\system.componentmodel.annotations.4.6.0.nupkg.sha512",
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Users\\Adin-PC\\.nuget\\packages\\xamarin.forms\\4.3.0.908675\\xamarin.forms.4.3.0.908675.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:FlightMaster.MobileApp.ViewModels.UserJourneyViewModels"
+             mc:Ignorable="d"
+             x:Class="FlightMaster.MobileApp.Views.UserJourneys.JourneyFlightTicketShow">
+
+    <ContentPage.BindingContext>
+        <views:UserJourneysFlightTicketsViewModel></views:UserJourneysFlightTicketsViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout  
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand">
+            
+            <ListView ItemsSource="{Binding Tickets}" ItemSelected="ListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="Black" Padding="10" Margin="10">
+
+                                <StackLayout HorizontalOptions="CenterAndExpand">
+
+                                    <StackLayout HorizontalOptions="Center">
+                                        <Label Text="{Binding FlightName, StringFormat='Flight Name: {0}'}"></Label>
+                                        <Label Text="{Binding FlightStatus, StringFormat='Flight Status: {0}'}"></Label>
+                                        <Label Text="{Binding FlightDate, StringFormat='Flight time: {0}'}"></Label>
+                                    </StackLayout>
+                                    
+                                    <StackLayout HorizontalOptions="CenterAndExpand">
+                                        <Label Text=" Ticked CheckIn Code:" FontSize="Medium"></Label>
+                                        <Label Text="{Binding Name,StringFormat='{0}'}" FontSize="Medium"  FontAttributes="Bold"></Label>
+                                        
+                                    </StackLayout>
+                                    <StackLayout HorizontalOptions="CenterAndExpand">
+                                        <Label Text="Ticket Status:"> </Label>
+                                        <Label Text="{Binding TicketStatus}" FontSize="Medium"  FontAttributes="Bold">
+                                            <Label.Triggers>
+                                                <Trigger TargetType="Label" Property="Text" Value="Checked In">
+                                                    <Setter Property="TextColor" Value="Green"></Setter>
+                                                </Trigger>
+                                            </Label.Triggers>
+                                        </Label>
+                                    </StackLayout>
+                                    <StackLayout HorizontalOptions="Center">
+                                        <Label Text="{Binding TicketType, StringFormat='Ticket Type: {0}'}"></Label>
+                                        <Label Text="{Binding Price, StringFormat='Ticket Price: {0} $'}"></Label>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                            
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

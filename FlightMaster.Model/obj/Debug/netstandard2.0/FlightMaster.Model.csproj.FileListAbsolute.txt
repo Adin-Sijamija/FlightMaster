@@ -1,0 +1,9 @@
+C:\Users\Adin-PC\source\repos\FlightMaster\FlightMaster.Model\bin\Debug\netstandard2.0\FlightMaster.Model.deps.json
+C:\Users\Adin-PC\source\repos\FlightMaster\FlightMaster.Model\bin\Debug\netstandard2.0\FlightMaster.Model.dll
+C:\Users\Adin-PC\source\repos\FlightMaster\FlightMaster.Model\bin\Debug\netstandard2.0\FlightMaster.Model.pdb
+C:\Users\Adin-PC\source\repos\FlightMaster\FlightMaster.Model\obj\Debug\netstandard2.0\FlightMaster.Model.csprojAssemblyReference.cache
+C:\Users\Adin-PC\source\repos\FlightMaster\FlightMaster.Model\obj\Debug\netstandard2.0\FlightMaster.Model.AssemblyInfoInputs.cache
+C:\Users\Adin-PC\source\repos\FlightMaster\FlightMaster.Model\obj\Debug\netstandard2.0\FlightMaster.Model.AssemblyInfo.cs
+C:\Users\Adin-PC\source\repos\FlightMaster\FlightMaster.Model\obj\Debug\netstandard2.0\FlightMaster.Model.dll
+C:\Users\Adin-PC\source\repos\FlightMaster\FlightMaster.Model\obj\Debug\netstandard2.0\FlightMaster.Model.pdb
+C:\Users\Adin-PC\source\repos\FlightMaster\FlightMaster.Model\obj\Debug\netstandard2.0\FlightMaster.Model.csproj.CoreCompileInputs.cache
